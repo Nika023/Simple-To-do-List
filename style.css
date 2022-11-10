@@ -61,7 +61,7 @@
     .todo li{
         flex: 1;
     }
-    .trash, .complete{
+    .trash, .complete, .important{
         background: none;
         color: rgb(212, 75, 75);
         border: none;
@@ -88,6 +88,10 @@
         opacity: 0.5;
     }
     
- 
+    .highlight{
+        font-weight: 900;
+        text-transform: uppercase;
+
+    }
       
       

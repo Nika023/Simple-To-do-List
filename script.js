@@ -14,6 +14,10 @@ function addTodo(event){
     newTodo.innerText = todoInput.value;
     newTodo.classList.add('todo-item'); 
     todoDiv.appendChild(newTodo); 
+    const importantButton = document.createElement('button');
+    importantButton.innerHTML = '<i class="fa-solid fa-exclamation"></i>';
+    importantButton.classList.add("important");
+    todoDiv.appendChild(importantButton);
     const completedButton = document.createElement('button');
     completedButton.innerHTML = '<i class="fa-sharp fa-solid fa-check"></i>';
     completedButton.classList.add("complete");
@@ -37,6 +41,10 @@ function DoneDelete(e) {
     if (item.classList[0] === 'complete'){
         const todo = item.parentElement;
         todo.classList.toggle("completed"); 
+    }
+    if (item.classList[0] === 'important'){
+        const todo = item.parentElement;
+        todo.classList.toggle("highlight"); 
     }
 }
 
